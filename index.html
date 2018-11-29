@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<title>Zadanie</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="app.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+  		<h2>Multi-Level Dropdowns</h2>                                        
+  		<div class="dropdown">
+    	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Klikni
+    	<span class="caret"></span></button>
+   		<ul class="dropdown-menu">
+      	<li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">Obsah <span class="caret"></span></a>
+        <ul class="dropdown-menu">         
+          <li><a tabindex="-1" href="#">Tabulka s informáciami</a></li>          
+          <li class="dropdown-submenu">
+            <a class="test" href="#">Drag-drop zadania <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Erik</a></li>
+              <li><a href="#">Edo</a></li>
+              <li><a href="#">Michal</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+	<div id="datum"></div>
+	
+
+	<script src="myScript.js"></script>
+</body>
+</html>
