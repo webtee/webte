@@ -2,12 +2,143 @@
     position: relative;
 }
 
-.dropdown-submenu .dropdown-menu {
+.dropdown-submenu>.dropdown-menu {
     top: 0;
     left: 100%;
-    margin-top: -1px;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
 }
 
-#datum{
-	margin-left: 40%;
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+#namesday{
+    padding-top: 15px;
+}
+#sidebox{
+    width: 25%;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+}
+.nameBtn{
+    background-color: #669999;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+#visitcounter{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/*Com*/
+.fotky{
+    border-radius: 50%;
+    height: 195px;
+    width: 155px;
+}
+
+div.my{
+    width: 33%;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 31%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1.names{
+    border-collapse: separate;
+    border-spacing: 16px 0;
+    border-spacing: 1rem 0;
+    color: #123;
+    display: table;
+    font-family: Merriweather;
+    font-size: 5em;
+    line-height: .25;
+    margin: 1em 0 .5em;
+    table-layout: auto;
+    text-align: center;
+    text-shadow: .0625em .0625em 0 rgba(0, 0, 0, .2);
+    white-space: nowrap;
+    width: 100%;
+}
+
+h1:before,h1:after{
+    border-top: 3px double #123;
+    content: '';
+    display: table-cell;
+    width: 50%;
+}
+
+h1:before,h1:after {
+    border-top-width: 6px;
+}
+
+.fb{
+    padding: 5px;
+    float: left;
+}
+
+.my {
+    padding-right: 30px;
 }

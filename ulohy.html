@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Kontakty</title>
+    <title>Úlohy</title>
     <link rel="stylesheet" type="text/css" href="app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
     <div class="navbar navbar-default" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -46,52 +47,66 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="ulohy.html">Rozdelenie úloh</a></li>
-                    <li class="active"><a href="kontakty.html">Kontakty</a></li>
+                    <li class="active"><a href="ulohy.html">Rozdelenie úloh</a></li>
+                    <li><a href="kontakty.html">Kontakty</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
     <div class="container">
-        <div class="content row">
-            <h1 class="names">Náš tým</h1>
-
-            <div class="my column">
-                <img src="img/edo.jpg" class="fotky"><br>
-
-                <a href="mailto:xmartinez@stuba.sk ">Eduardo Milan Martinez</a>
-                <p>Tel. číslo: +421 949 640 898 </p>
-                <p>Adresa: SNP č.49 90301 Senec</p>
-                <a href="https://www.facebook.com/eduardo.martinez" class="fb"> <img alt="Facebook" src="img/fb.png" width="50" height="50"></a>
-                <p>Moje meno je Eduardo Milan Martinez. Mám 21 rokov, narodil som sa v Bratislave a žijem v meste Senec. Som absolventom gymnázia Antona Bernoláka. Momentálne som študentom Fakulty elektrotechniky a informatiky Slovenskej technickej univerzity v Bratislave. Mojím odborom je Aplikovana informatika.</p>
-
-            </div>
-
-            <div class="my column">
-                <img src="img/erik.jpg" class="fotky"><br>
-
-                <a href="mailto:eriklampert275@gmail.com">Erik Lampert</a>
-                <p>Tel. číslo: +421 944 138 251 </p>
-                <p>Adresa: Zvončín 265 91901 Zvončín</p>
-                <a href="https://www.facebook.com/erik.lampert" class="fb"> <img alt="Facebook" src="img/fb.png" width="50" height="50"></a>
-                <p>Volám sa Erik Lampert. Aktuálne žijem vo Zvončíne, ale narodil som sa v Trnave. Mojím hlavným koníčkom je vzpieranie. Športom sa venujem už od 6 rokov, začínal som s karate potom kickbox aktuálne sa 3 roky venujem vzpieraniu.</p>
-
-
-            </div>
-
-            <div class="my column">
-                <img src="img/michal.jpg" class="fotky"><br>
-
-                <a href="mailto:michal.moravek97@gmail.com">Michal Moravek</a>
-                <p>Tel. číslo: +421 908 887 933 </p>
-                <p>Adresa: Levárska 1139, 900 61 Gajary</p>
-                <a href="https://www.facebook.com/michal.k.moravek" class="fb"> <img alt="Facebook" src="img/fb.png" width="50" height="50"></a>
-                <p>Volám sa Michal Morávek, mám 21rokov,bývam v malej dedinke Gajary,ktorá sa nachádza 10km od okresného mesta Malacky a 40km od hlavného mesta Bratislava. Navštevoval som základnú školu v Gajaroch, potom následovalo Gymnázium v Malackach. Maturoval som z nemeckého a slovenského jazyka, matematika a fyzika.</p>
-
-            </div>
-
-        </div>
+        <table>
+            <tr>
+                <th>Názov úlohy</th>
+                <th>Eduardo Milan Martinez</th>
+                <th>Erik Lampert</th>
+                <th>Michal Moravek</th>
+            </tr>
+            <tr>
+                <td>Trojúrovňové menu</td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zobrazenie aktuálneho dátumu s meninami v daný deň</td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zobrazenie počítadla osobných prístupov na stránku</td>
+                <td></td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Zobrazenie histórie prehliadania </td>
+                <td></td>
+                <td></td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+            </tr>
+            <tr>
+                <td>Text z troch článkov na Internete v troch stĺpcoch</td>
+                <td></td>
+                <td></td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+            </tr>
+            <tr>
+                <td>Grafický návrh</td>
+                <td></td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Kontakty</td>
+                <td></td>
+                <td style="text-align:center;"><span style="font-family: wingdings; font-size: 200%;">&#252;</span></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
+
+    <script src="myScript.js.js"></script>
     <script src="meniny.js"></script>
 </body>
 </html>
