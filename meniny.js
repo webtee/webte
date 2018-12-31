@@ -138,10 +138,10 @@ function findName() {
                     SKdays= $(this).find('SKsviatky').text();
                 if (day == finaldate){
                     if (SKname === ""){
-                        $("#result").text("Meniny neoslavuje nikto: " + SKdays);
+                        $("#namesdayresult").text("Meniny neoslavuje nikto: " + SKdays);
                         console.log("DONE");
                     }else{
-                        $("#result").text("Meniny oslavuje : " + SKname);
+                        $("#namesdayresult").text("Meniny oslavuje : " + SKname);
                         console.log("DONE");
                     }}
             });
@@ -198,7 +198,7 @@ function findDate(){
                         translateDiacritice(SKname).includes(name)  ||
                         SKname.toLowerCase().includes(name)  ||
                         SKname.includes(name)){
-                        $("#result").text(SKname + " oslavuje meniny: " + createDate(day));
+                        $("#namesdayresult").text(SKname + " oslavuje meniny: " + createDate(day));
                     }
                 });
             }

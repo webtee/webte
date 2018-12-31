@@ -3,11 +3,13 @@
 <head>
 	<title>Zadanie</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="modalbox.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="Cookies.js"></script>
+    <script src="photos.js"></script>
 </head>
 <body>
     <div class="navbar navbar-default" role="navigation">
@@ -52,57 +54,60 @@
             </div><!--/.nav-collapse -->
         </div>
     </div>
+    <div class="undernavimg">
+        <img id="headerimg" src="img/bcg2.png" alt="Nature" style="width: 100%;">
+        <h1 class="onimage">Vitajte na našej stránke o cestovaní</h1>
+    </div>
 	<div class="container">
-  		<h2>Stránka</h2>
         <div class="row">
+            <div id="obsah">
+                <div id="articletxt">
+                    <h3>Prečo sme si vybrali tému cestovanie?</h3>
+                    <p>Všetci traja veľmi radi cestujeme, baví nás spoznávať nové krajiny a miesta. To, že si cestu plánujeme, pripravujeme sa na ňu, študujeme si informácie o krajine, ktorú navštívime, to všetko nás núti zmeniť zaužívané stereotypy a núti nás venovať sa niečomu novému. Aj skutočnosť, že si na cestovanie šetríme peniaze, nás núti meniť zvyky. V niečom sa uskromníme, lebo máme pred sebou nový cieľ. Okrem krásnych spomienok z dovolenky, ktoré nikdy nezovšednia, nám cestovanie prináša i mnoho ďalších pozitív. Riešiť problémy za jazdy v prenajatom aute, cestou bicyklom po skalnatých horách alebo na recepcii v hoteli v štáte, ktorého jazyk ovládame len nedokonale, nie je jednoduché. Ak ich však vyriešime, naše sebavedomie zdravo stúpne, budeme na seba hrdí a naše schopnosti nám prinesú pocit spokojnosti. Dovolenkové destinácie sú často plné ľudí, ktorí odpočívajú a užívajú si. Nie sú znudení, ale šťastní a ich šťastie je nákazlivé podobne ako šťastie domácich obyvateľov mnohých južanských krajín. Keď sa na nás ľudia okolo usmievajú aj my sa cítime spokojnejšie a šťastnejšie. Chudoba pritom v mnohých prípadoch nie je prekážkou šťastia. Naopak, pri spoznávaní zemegule často zisťujeme, že chudobnejšie národy sú  veľakrát oveľa bezprostrednejšie a šťastnejšie ako tie bohaté.</p>
+                    <h3>Miesta ktoré sme navštívili</h3>
+                </div>
+                <div id="zoznam"></div>
+            </div>
             <div class="pull-right" id="sidebox">
+                <div id="visitcounter"></div>
+
                 <form action="">
                 <fieldset>
+                    <label class="namesdayLabel">Zadaj dátum</label>
                     <input type="text" name="bdaytxt" id="namesdate2" placeholder="DD.MM." >
+                </fieldset>
+                </form>
+                <button onclick="findName()" class="nameBtn">Nájdi meno</button><br>
+                <form action="">
+                    <fieldset>
+                    <label class="namesdayLabel">Zadaj meno</label>
                     <input type="text" name="bdaynumber" id="namesdate3" placeholder="Zadaj meno" >
                 </fieldset>
                 </form>
-                <button onclick="findName()" class="nameBtn">Nájdi meno</button>
                 <button onclick="findDate()" class="nameBtn">Nájdi dátum</button>
-                <div id="result"></div>
 
-                <div class="align-text-bottom" id="visitcounter"></div>
+                <div id="namesdayresult"></div>
+            </div>
+            <div id="modal1" class="modal">
+                <span class="close">x</span>
+                <a class="previous" onclick="plusSlides(-1)">❮</a>
+                <div class="modal_open">
+                    <img class="image" id="img01" src="img/img1.jpg" alt="Budapest">
+                    <div id="text">
+                        <div id="caption"></div>
+                        <div id="podrobnosti"></div>
+                    </div>
+                </div>
+                <a class="next" onclick="plusSlides(1)">❯</a>
             </div>
         </div>
-
-
     </div>
-
-
+    <div class="bottomimg">
+        <img id="imgtrees1" src="img/trees.png" alt="trees">
     </div>
-    <script LANGUAGE="JavaScript">
-        var now = new Date();
-        fixDate(now);
-        /*
-        cookie expires in one year (actually, 365 days)
-        365 days in a year
-        24 hours in a day
-        60 minutes in an hour
-        60 seconds in a minute
-        1000 milliseconds in a second
-        */
-        var visitcounter = document.getElementById('visitcounter');
-        now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
-        var visits = getCookie("counter");
-        // if the cookie wasn't found, this is your first visit
-        if (!visits) {
-            visits = 1; // the value for the new cookie
-            visitcounter.innerHTML = "By the way, this is your first time here.";
-        } else {
-            // increment the counter
-            visits = parseInt(visits) + 1;
-            visitcounter.innerHTML = "Page visited: " + visits + " times.";
-        }
-        // set the new cookie
-        setCookie("counter", visits, now);
-        // -->
-    </script>
-	<script src="myScript.js"></script>
+    <script src="visitcounter.js"></script>
+    <script src="myScript.js"></script>
+    <script src="modalscript.js"></script>
     <script src="meniny.js"></script>
 </body>
 </html>

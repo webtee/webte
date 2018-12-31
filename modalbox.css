@@ -1,0 +1,144 @@
+header{
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+}
+#zoznam{
+    text-align: center;
+}
+img.modalimg{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 15px;
+    border-radius: 8px;
+    width: 400px;
+    height: 210px;
+    border: 1px solid black;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal_open {
+    margin: auto;
+    margin-top: 50px;
+    display: block;
+    width: 85%;
+    height: 85%;
+    max-width: 1100px;
+    float: none;
+}
+.image{
+    margin: auto;
+    float: left;
+    height: 70%;
+    width: 70%;
+}
+
+.modal_open, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal_open {
+        width: 100%;
+    }
+}
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.previous:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#text{
+    display: inline-block;
+    height: 372px;
+    width: 200px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    font-family: "Book Antiqua";
+}
+#caption {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #ccc;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+#podrobnosti{
+    padding-left: 5px;
+    float: left;
+}
+.button{
+    display: block;
+    margin-left: 45%;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
