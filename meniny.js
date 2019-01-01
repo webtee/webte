@@ -36,16 +36,16 @@ function findMonth(number){
 
 var countryimg = [];
 var imgSK = document.createElement("img");
-imgSK.src = "img/skflag.png";
+imgSK.src = "img/namesday/skflag.png";
 imgSK.alt = "SK flag";
 var imgCZ = document.createElement("img");
-imgCZ.src = "czflag.jpg";
+imgCZ.src = "img/namesday/czflag.jpg";
 var imgHU = document.createElement("img");
-imgHU.src = "huflag.png";
+imgHU.src = "img/namesday/huflag.png";
 var imgPL = document.createElement("img");
-imgPL.src = "plflag.png";
+imgPL.src = "img/namesday/plflag.png";
 var imgAT = document.createElement("img");
-imgAT.src = "atflag.png";
+imgAT.src = "img/namesday/atflag.png";
 countryimg.push(imgSK);
 countryimg.push(imgCZ);
 countryimg.push(imgHU);
@@ -67,8 +67,12 @@ function myelement(d,sk,cz,hu,pl,at,hol) {
     this.atname = at;
     this.holidays = hol;
 }
-var myelement1;
+
+var date;
 $(document).ready(function(){
+    $("#namesday" ).append(dd + ". " + findMonth(mm) +" "+ year + " ");
+    var src = document.getElementById("namesday");
+    src.appendChild(imgSK);
     $.ajax({
         type: "GET" ,
         url: "meniny.xml" ,
@@ -83,24 +87,20 @@ $(document).ready(function(){
                 var ATname =$(this).find('AT').text();
                 var day = $(this).find('den').text(),
                     SKdays= $(this).find('SKsviatky').text();
-                if (day == (mm+ "" +dd)){
-                    myelement1 = new myelement(day,SKname,CZname,
+                if ((day == (mm+ "" +dd)) || (day == ("0" + mm+ "0" +dd))){
+                    date = new myelement(day,SKname,CZname,
                         HUname,PLname,ATname,SKdays);
-                    $("#namesday" ).append(" " + myelement1.skname);
-                    console.log("DONE");
-                    if (SKname === ""){
-                        $("#namesday" ).append("Meniny neoslavuje nikto: " + SKdays);
+                    if (SKname === "" && SKdays != ""){
+                        $("#namesday" ).append(" | " + SKdays);
+                    }else if(SKname != "" && SKdays != ""){
+                        $("#namesday" ).append(" | Meniny má " + date.skname + ", " + SKdays);
+                    }else{
+                        $("#namesday" ).append(' | Meniny má ' + date.skname);
                     }
                 }
             });
         }
     });
-    console.log(myelement1);
-    var monthstr = findMonth(mm);
-    $("#namesday" ).append(+dd + " " + monthstr +" "+ year);
-    $("#namesday" ).append(' | Meniny má ');
-    var src = document.getElementById("namesday");
-    src.appendChild(imgSK);
 });
 
 function findName() {
@@ -149,37 +149,38 @@ function findName() {
     });
 }
 
-
 var withdiacritic = "áäčďéěíĺľňóô öŕšťúů üýřžÁÄČĎÉĚÍĹĽŇÓÔ ÖŔŠŤÚŮ ÜÝŘŽ";
 var woutdiacritic = "aacdeeillnoo orstuu uyrzAACDEEILLNOO ORSTUU UYRZ";
 
-function translateDiacritice(word)
-{
+function translateDiacritice(word){
     var tx = "";
     for(p = 0; p < word.length; p++)
     {
         if (withdiacritic.indexOf(word.charAt(p)) != -1)
         {
-            console.log(withdiacritic.indexOf(word.charAt(p)));
             tx += woutdiacritic.charAt(withdiacritic.indexOf(word.charAt(p)));
-            console.log(tx);
             word = word.replace(word.charAt(p), tx);
             tx = "";
         }
     }
     return word;
 }
+
 function createDate(day){
     var str1 = day.substr(0,2);
     var str2 = day.substr(2,2);
     return str2 + "." + str1 + ".";
 }
+
 function findDate(){
     var name = document.getElementById("namesdate3").value;
     console.log(name);
     if (name.length == 0){
         alert("Zadaj meno aby sa zobrazil dátum menín.");
     }else{
+        if ( $("#namesdayresult").text().length > 0 ){
+            $("#namesdayresult").text("");
+        }
         $.ajax({
             type: "GET" ,
             url: "meniny.xml" ,
@@ -194,11 +195,23 @@ function findDate(){
                     var ATname =$(this).find('AT').text();
                     var day = $(this).find('den').text(),
                         SKdays= $(this).find('SKsviatky').text();
-                    if (translateDiacritice(SKname).toLowerCase().includes(name) ||
-                        translateDiacritice(SKname).includes(name)  ||
-                        SKname.toLowerCase().includes(name)  ||
-                        SKname.includes(name)){
-                        $("#namesdayresult").text(SKname + " oslavuje meniny: " + createDate(day));
+                    var splited = SKname.split(", ");
+                    if (splited.length > 1){
+                        console.log('More thann 1');
+                        for (i = 0; i < splited.length;i++){
+                            if (translateDiacritice(splited[i]).toLowerCase() == name ||
+                                translateDiacritice(splited[i]) == name  ||
+                                splited[i].toLowerCase() == name  ||
+                                splited[i] == name){
+                                $("#namesdayresult").append(SKname + " oslavuje meniny: " + createDate(day));
+                            }
+                        }
+                    }
+                    if (translateDiacritice(SKname).toLowerCase() == name ||
+                        translateDiacritice(SKname) == name  ||
+                        SKname.toLowerCase() == name  ||
+                        SKname == name){
+                        $("#namesdayresult").append(SKname + " oslavuje meniny: " + createDate(day));
                     }
                 });
             }

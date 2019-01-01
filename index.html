@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="modalbox.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="navbar&dropdown.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="Cookies.js"></script>
@@ -34,12 +35,12 @@
                             <li class="dropdown-submenu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Obsah</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="6.uloha.html">Správy</a></li>                                <li class="divider"></li>
+                                    <li><a href="news.html">Správy</a></li>                                <li class="divider"></li>
                                     <li class="dropdown-submenu">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Drag and Drop Hry</a>
                                         <ul class="dropdown-menu">
                                             <li><a href="edosgame.html">Edo</a></li>
-                                            <li><a href="#">Erik</a></li>
+                                            <li><a href="eriksgame.html">Erik</a></li>
                                             <li><a href="#">Michal</a></li>
 
                                         </ul>
@@ -48,8 +49,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="ulohy.html">Rozdelenie úloh</a></li>
-                    <li><a href="kontakty.html">Kontakty</a></li>
+                    <li><a href="tasks.html">Rozdelenie úloh</a></li>
+                    <li><a href="contacts.html">Kontakty</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -70,29 +71,30 @@
             </div>
             <div class="pull-right" id="sidebox">
                 <div id="visitcounter"></div>
-
-                <form action="">
-                <fieldset>
-                    <label class="namesdayLabel">Zadaj dátum</label>
-                    <input type="text" name="bdaytxt" id="namesdate2" placeholder="DD.MM." >
-                </fieldset>
-                </form>
-                <button onclick="findName()" class="nameBtn">Nájdi meno</button><br>
-                <form action="">
-                    <fieldset>
-                    <label class="namesdayLabel">Zadaj meno</label>
-                    <input type="text" name="bdaynumber" id="namesdate3" placeholder="Zadaj meno" >
-                </fieldset>
-                </form>
-                <button onclick="findDate()" class="nameBtn">Nájdi dátum</button>
-
-                <div id="namesdayresult"></div>
+                <div id="namesdayfinder">
+                    <h3>Nájdi meniny</h3>
+                    <form action="">
+                        <fieldset>
+                            <label class="namesdayLabel">Zadaj dátum</label>
+                            <input type="text" name="bdaytxt" id="namesdate2" placeholder="DD.MM." >
+                        </fieldset>
+                    </form>
+                    <button onclick="findName()" class="nameBtn">Nájdi meno</button><br>
+                    <form action="">
+                        <fieldset>
+                            <label class="namesdayLabel">Zadaj meno</label>
+                            <input type="text" name="bdaynumber" id="namesdate3" placeholder="Zadaj meno" >
+                        </fieldset>
+                    </form>
+                    <button onclick="findDate()" class="nameBtn">Nájdi dátum</button>
+                    <div id="namesdayresult"></div>
+                </div>
             </div>
             <div id="modal1" class="modal">
                 <span class="close">x</span>
                 <a class="previous" onclick="plusSlides(-1)">❮</a>
                 <div class="modal_open">
-                    <img class="image" id="img01" src="img/img1.jpg" alt="Budapest">
+                    <img class="image" id="img01" src="img/1.jpg" alt="Zakynthos">
                     <div id="text">
                         <div id="caption"></div>
                         <div id="podrobnosti"></div>

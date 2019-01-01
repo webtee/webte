@@ -40,8 +40,9 @@ img.modalimg{
 .image{
     margin: auto;
     float: left;
-    height: 70%;
+    height: 372px;
     width: 70%;
+    border-radius: 8px;
 }
 
 .modal_open, #caption {

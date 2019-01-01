@@ -1,0 +1,57 @@
+canvas#viewport {
+    border: 1px solid black;
+    width: 900px;
+    height: 400px;
+}
+#starterButton, #restarterButton, #animationButton, #endGameText{
+    position: absolute;
+    text-align: center;
+    background-color: #4d94ff;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+#endGameText{
+    left: 40%;
+    top: 400px;
+    width: 300px;
+    height: 80px;
+    font-size: large;
+    background-color: #7da8ed;
+}
+#starterButton, #restarterButton{
+    left: 40%;
+    top: 340px;
+    width: 300px;
+    height: 50px;
+    font-size: xx-large;
+}
+#animationButton{
+    left:20%;
+    top: 180px;
+    width: 200px;
+    height: 30px;
+    font-size: large;
+}
+#stopwatch {
+    margin: auto;
+    background-color: azure;
+    text-align: center;
+}
+#skgameheader{
+    margin: auto;
+    width: 63%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#skgamelist{
+    margin: auto;
+    width: 50%;
+}
+#c{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

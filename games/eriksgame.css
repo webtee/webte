@@ -1,0 +1,66 @@
+#myCanvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 1px solid black;
+}
+
+#starterButton{
+    position: absolute;
+    left: 540px;
+    top: 400px;
+    /*
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     */
+    width: 300px;
+    height: 50px;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #4d94ff;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+
+#refresh{
+    position: absolute;
+    left: 540px;
+    top: 600px;
+    width: 300px;
+    height: 50px;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #4d94ff;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+
+.tu{
+	margin-left: 350px;
+	font-weight: bold;
+	font-size: large;
+}
+
+h2{
+	margin-left: 400px;
+	font-size: 45px;
+}
+
+h5{
+	font-size: 20px;
+}
+
+#stopwatch{
+margin: auto;
+text-align: center;
+}
+#vid{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
