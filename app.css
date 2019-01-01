@@ -9,11 +9,11 @@
     width: 20%;
     height: 450px;
     margin-top: 40px;
-    padding-left: 30px;
     border: 1px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
     position: relative;
+    overflow: hidden;
 }
 .namesdayLabel{
     margin-top: 20px;
@@ -32,6 +32,17 @@
 }
 #visitcounter{
     margin: auto;
+    width: 80%;
+}
+#namesdayfinder{
+    margin: auto;
+    width: 80%;
+}
+#namesdate2,#namesdate3{
+    width: 90%;
+    margin: auto;
+    float: left;
+    clear: left;
 }
 table {
     font-family: arial, sans-serif;
@@ -114,8 +125,21 @@ h1:before,h1:after {
     width: 80%;
     float: left;
     margin: auto;
-}
 
+}
+@media screen and (max-width: 1000px) {
+    #obsah {
+        float: none;
+        margin-right:0;
+        width:auto;
+        border:0;
+        border-bottom:2px solid #000;
+    }
+    #sidebox{
+        width:50%;
+        margin: auto;
+    }
+}
 .stlpec {
     float: left;
     width: 33.33%;
@@ -128,26 +152,26 @@ h1:before,h1:after {
     clear: both;
     display: table;
 }
-
+.undernavimg{
+    position: relative;
+}
 #headerimg{
     filter: brightness(50%);
 
 }
 .onimage{
+    font-size: xx-large;
     color: white;
     font-family: Serif;
     font-weight: bolder;
     position: absolute;
-    top: 25%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#imgtrees{
-    background-repeat: repeat-x;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
-#imgtrees1{
-    width: 100%;
+@media screen and (max-width: 700px) {
+    .onimage{
+        top: 20%;
+        font-size: 1em;
+    }
 }

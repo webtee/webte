@@ -13,6 +13,12 @@ img.modalimg{
     height: 210px;
     border: 1px solid black;
 }
+@media screen and (max-width: 400px) {
+    img.modalimg{
+        width: auto;
+        height: auto;
+    }
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

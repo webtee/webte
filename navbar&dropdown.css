@@ -48,3 +48,12 @@
 .navbar{
     margin-bottom: 0px;
 }
+#imgtrees{
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+#imgtrees1{
+    width: 100%;
+}
