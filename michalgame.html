@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and drop game</title>
+    <link rel="stylesheet" type="text/css" href="navbar&dropdown.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="games/michalgame.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Cestovanie</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <div class="nav navbar-nav navbar-right" id="namesday">
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Domov</a></li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
+                    <ul class="dropdown-menu multi-level">
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Obsah</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="news.html">Správy</a></li>                                <li class="divider"></li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Drag and Drop Hry</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="edosgame.html">Edo</a></li>
+                                        <li><a href="eriksgame.html">Erik</a></li>
+                                        <li><a href="michalgame.html">Michal</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="tasks.html">Rozdelenie úloh</a></li>
+                <li><a href="contacts.html">Kontakty</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+<div class="container"><div id="broad"></div></div>
+<h1 id="timer"> 00 : 00 . 000</h1>
+<div id="tlacitka">
+    <button id="start" onclick="start()">Štart</button>
+    <button id="tutorial" onclick="tutorial()">Tutorial</button>
+</div>
+<div id="modal">
+    <span class="close">&times;</span>
+    <video src="tutorial.mp4" id="demo" controls></video>
+</div>
+<canvas id="plocha" width="1500" height="700"></canvas>
+<script src="stopwatch.js"></script>
+<script src="games/michalgame.js"></script>
+<script src="meniny.js"></script>
+<script src="breadcrumb.js"></script>
+</body>
+</html>

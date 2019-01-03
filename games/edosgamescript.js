@@ -161,7 +161,6 @@ $(document).mousedown(function(e) {
     mouseX = e.offsetX;
     mouseY = e.offsetY;
     clickedImgNumber = findImage(mouseX,mouseY);
-    console.log('Clicked ');
 }).mouseup(function(e) {
     mousePressed = false;
     dragging = false;

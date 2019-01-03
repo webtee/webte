@@ -5,9 +5,12 @@
 /* Create three equal columns that floats next to each other */
 .column {
     float: left;
-    width: 33.33%;
-    padding: 10px;
-   /* height: 300px; *//* Should be removed. Only for demonstration */
+    width: 30%;
+    padding-left: 20px;
+    margin: 10px;
+    border-radius: 4%;
+
+    /* height: 300px; *//* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -15,4 +18,19 @@
     content: "";
     display: table;
     clear: both;
+    padding-right: 10px;
+}
+.container{
+    width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#stlpec1{
+    background-color: #4CAF50;
+}
+#stlpec2{
+    background-color: snow;
+}
+#stlpec3{
+    background-color: red;
 }

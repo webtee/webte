@@ -39,8 +39,7 @@
 									<ul class="dropdown-menu">
 										<li><a href="edosgame.html">Edo</a></li>
 										<li class="active"><a href="eriksgame.html">Erik</a></li>
-										<li><a href="#">Michal</a></li>
-
+										<li><a href="michalgame.html">Michal</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -54,13 +53,15 @@
 	</div>
 </div>
 	<div class="container">
-	<h2>Poskladaj cestovateľa</h2>
-	<h5>Pokyny hry:</h5>
-	<ul>
-		<li>Po spustení hry sa spúštajú stopky, ktoré sa zastavia po úspešnom poskladaní cestovateľa</li>
-		<li>Cestovateľ sa skladá z 10 častí</li>
-		<li>Nižšie je možnosť pozretia animácie ako tohto cestovateľa zostaviť</li>
-	</ul></div>
+		<div id="broad"></div>
+		<h2>Poskladaj cestovateľa</h2>
+		<h5>Pokyny hry:</h5>
+		<ul>
+			<li>Po spustení hry sa spúštajú stopky, ktoré sa zastavia po úspešnom poskladaní cestovateľa</li>
+			<li>Cestovateľ sa skladá z 10 častí</li>
+			<li>Nižšie je možnosť pozretia animácie ako tohto cestovateľa zostaviť</li>
+		</ul>
+	</div>
 	<button id="starterButton" onclick="startGame();timer()">Spusti hru</button>
 	<button id="refresh" onClick="window.location.reload()" style="visibility: hidden;">Hraj odznovu</button>
 	<canvas id="myCanvas" width="1200" height="800"></canvas>
@@ -69,5 +70,7 @@
 
 	
   <script src="games/erikgamescript.js"></script>
+	<script src="breadcrumb.js"></script>
+
 </body>
 </html>
